@@ -1,0 +1,32 @@
+# ----- Build tooling & dependencies (never commit) -----
+node_modules/
+package.json
+package-lock.json
+yarn.lock
+
+# ----- Generated build config (re-created by rebuild.sh each run) -----
+tailwind.config.js
+input.css
+tailwind.css
+
+# ----- Temp / intermediate build artifacts -----
+*.tmp
+*.tmp.js
+*.log
+
+# ----- OS / editor cruft -----
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*~
+
+# ===========================================================================
+# WHAT TO KEEP (do NOT ignore these - they are your source & deliverable):
+#   index.html        <- the built, self-contained page GitHub Pages serves
+#   index.app.jsx     <- your app source (edit this, then run rebuild.sh)
+#   rebuild.sh, serve.sh, inline_tw.py, precompile_jsx.py  <- the kit
+#   README.md
+# ===========================================================================
