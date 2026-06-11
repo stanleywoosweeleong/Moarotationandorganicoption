@@ -2204,11 +2204,10 @@
                   <line x1="256" y1="240" x2="256" y2="335" stroke="#114b2d" strokeWidth="7" strokeLinecap="round"/>
                 </svg>
               </div>
-              {/* Title + credit: shown from the sm breakpoint up. Hidden on phones so the
-                  controls get the full width (the credit still lives in the About dialog). */}
+              {/* Title: shown from the sm breakpoint up. Hidden on phones so the
+                  controls get the full width. Full sourcing lives in the About dialog. */}
               <div className="min-w-0 hidden sm:block">
                 <h1 className="font-extrabold text-base sm:text-lg text-slate-900 truncate">{t.appTitle}</h1>
-                <p className="text-xs text-slate-500 font-semibold uppercase tracking-wide truncate">{t.appSubtitle}</p>
               </div>
             </div>
             <div className="flex items-center gap-2 shrink-0">

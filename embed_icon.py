@@ -54,7 +54,7 @@ def main():
   <style>
     #boot-splash{{position:fixed;inset:0;z-index:9999;background:#114b2d;
       display:flex;align-items:center;justify-content:center;
-      transition:opacity .45s ease;opacity:1;}}
+      transition:opacity .2s ease;opacity:1;}}
     #boot-splash.hide{{opacity:0;pointer-events:none;}}
     #boot-splash .boot-inner{{display:flex;flex-direction:column;align-items:center;gap:18px;padding:24px;text-align:center;}}
     #boot-splash .boot-icon{{width:128px;height:128px;animation:bootpop .5s ease;}}
@@ -74,17 +74,17 @@ def main():
     (function(){{
       function hide(){{var s=document.getElementById('boot-splash');
         if(s&&!s.classList.contains('hide')){{s.classList.add('hide');
-          setTimeout(function(){{if(s&&s.parentNode)s.parentNode.removeChild(s);}},600);}}}}
+          setTimeout(function(){{if(s&&s.parentNode)s.parentNode.removeChild(s);}},280);}}}}
       var root=document.getElementById('root');
       var done=false;
       function check(){{
         if(done) return true;
-        if(root&&root.children.length>0){{ done=true; setTimeout(hide,250); return true; }}
+        if(root&&root.children.length>0){{ done=true; setTimeout(hide,30); return true; }}
         return false;
       }}
       // Poll for React mount (reliable across browsers); also observe as a fast path.
       if(!check()){{
-        var iv=setInterval(function(){{ if(check()) clearInterval(iv); }},60);
+        var iv=setInterval(function(){{ if(check()) clearInterval(iv); }},25);
         try{{
           var mo=new MutationObserver(function(){{ if(check()){{mo.disconnect();clearInterval(iv);}} }});
           mo.observe(root,{{childList:true}});

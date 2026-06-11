@@ -385,7 +385,7 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
   <style>
     #boot-splash{position:fixed;inset:0;z-index:9999;background:#114b2d;
       display:flex;align-items:center;justify-content:center;
-      transition:opacity .45s ease;opacity:1;}
+      transition:opacity .2s ease;opacity:1;}
     #boot-splash.hide{opacity:0;pointer-events:none;}
     #boot-splash .boot-inner{display:flex;flex-direction:column;align-items:center;gap:18px;padding:24px;text-align:center;}
     #boot-splash .boot-icon{width:128px;height:128px;animation:bootpop .5s ease;}
@@ -405,17 +405,17 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
     (function(){
       function hide(){var s=document.getElementById('boot-splash');
         if(s&&!s.classList.contains('hide')){s.classList.add('hide');
-          setTimeout(function(){if(s&&s.parentNode)s.parentNode.removeChild(s);},600);}}
+          setTimeout(function(){if(s&&s.parentNode)s.parentNode.removeChild(s);},280);}}
       var root=document.getElementById('root');
       var done=false;
       function check(){
         if(done) return true;
-        if(root&&root.children.length>0){ done=true; setTimeout(hide,250); return true; }
+        if(root&&root.children.length>0){ done=true; setTimeout(hide,30); return true; }
         return false;
       }
       // Poll for React mount (reliable across browsers); also observe as a fast path.
       if(!check()){
-        var iv=setInterval(function(){ if(check()) clearInterval(iv); },60);
+        var iv=setInterval(function(){ if(check()) clearInterval(iv); },25);
         try{
           var mo=new MutationObserver(function(){ if(check()){mo.disconnect();clearInterval(iv);} });
           mo.observe(root,{childList:true});
@@ -4802,9 +4802,7 @@ function App() {
     className: "min-w-0 hidden sm:block"
   }, /*#__PURE__*/React.createElement("h1", {
     className: "font-extrabold text-base sm:text-lg text-slate-900 truncate"
-  }, t.appTitle), /*#__PURE__*/React.createElement("p", {
-    className: "text-xs text-slate-500 font-semibold uppercase tracking-wide truncate"
-  }, t.appSubtitle))), /*#__PURE__*/React.createElement("div", {
+  }, t.appTitle))), /*#__PURE__*/React.createElement("div", {
     className: "flex items-center gap-2 shrink-0"
   }, /*#__PURE__*/React.createElement("div", {
     className: "flex items-center h-10 bg-white border border-slate-300 rounded-xl shadow-sm overflow-hidden"
