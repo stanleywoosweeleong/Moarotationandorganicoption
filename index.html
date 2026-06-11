@@ -379,7 +379,7 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
   <line x1="256" y1="240" x2="256" y2="335" stroke="#114b2d" stroke-width="7" stroke-linecap="round"/>
 </svg></div>
       <div class="boot-title">虫药轮替 · Pest MoA</div>
-      <div class="boot-sub">Chemical Once, Organic Once · 一次化学 · 一次有机</div>
+      <div class="boot-sub"><span class="nb">Chemical Once, Organic Once</span> · <span class="nb">一次化学 · 一次有机</span></div>
     </div>
   </div>
   <style>
@@ -394,7 +394,9 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
     #boot-splash .boot-title{color:#f4f2ea;font-weight:800;font-size:22px;
       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC",sans-serif;}
     #boot-splash .boot-sub{color:#a7d7c0;font-weight:600;font-size:12.5px;letter-spacing:.02em;
+      max-width:300px;line-height:1.5;
       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC",sans-serif;}
+    #boot-splash .boot-sub .nb{white-space:nowrap;}
     @keyframes bootpop{0%{transform:scale(.82);opacity:0;}100%{transform:scale(1);opacity:1;}}
     @media (prefers-reduced-motion:reduce){
       #boot-splash{transition:none;} #boot-splash .boot-icon{animation:none;}

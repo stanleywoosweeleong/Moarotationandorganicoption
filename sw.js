@@ -17,7 +17,7 @@
  *
  * Bump CACHE_VERSION if you ever need to force every device to drop old caches.
  */
-const CACHE_VERSION = 'pestmoa-v27-fast-splash';
+const CACHE_VERSION = 'pestmoa-v28-splash-wrap';
 
 self.addEventListener('install', (event) => {
   // Activate this worker as soon as it finishes installing.
